@@ -78,7 +78,23 @@ letter-spacing: 0.02em;
 color:#2e2f42;
 padding-top: 24px;
 padding-bottom: 24px;
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.link-studio {
+    position: relative;
+    color: #404bbf;
+  }
+  .link-studio::after {
+    content: "";
+    position: absolute;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    display: block;
+    left: 0;
+    bottom: -1px;
+  }
 .menu-link:hover,
 .menu-link:focus { 
 color: #404bbf;
@@ -116,6 +132,11 @@ margin-left: auto;
     margin-left: auto;
     margin-right: auto;
     padding: 188px 0 ;
+    background-image:linear-gradient( rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+     url(../images/people-office\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: auto;
 }
 .main-title{
     max-width: 496px;
@@ -150,8 +171,9 @@ margin-left: auto;
 }
 .buy-now-btn:hover,
 .buy-now-btn:focus{
-background-color: #404BBF
+background-color: #404BBF;
 }
+
 /* SECTION 1 */
 .visually-hidden {
     position: absolute;
@@ -243,6 +265,41 @@ margin-bottom: 72px;
     color: #434455;
     text-align: center; 
 }
+
+.team-social {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 8px 16px;
+  }
+  .team-social-list {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .team-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .team-social-link:hover,
+  .team-social-link:focus {
+    background-color: #404bbf;
+  }
+  
+  .team-social-icon {
+    fill: #f4f4fd;
+  }
 /* SECTION 3 */
 .communication{
     font-weight: 700;
@@ -264,8 +321,18 @@ margin-bottom: 72px;
     row-gap: 48px;
 }
 .communication-item{
-    width: calc((100% - 48px) / 3); 
+    position: relative;
+    overflow: hidden;
+    width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+ .communication-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+  .communication-item:hover .portfolio-ran-text {
+    transform: translateY(0%);
+  }
 .communication-list-title{
     font-weight: 500;
     font-size: 20px;
@@ -281,6 +348,27 @@ margin-bottom: 72px;
     letter-spacing: 0.02em;
     color: #434455;
 }
+.portfolio-ran {
+    position: relative;
+    overflow: hidden;
+  }
+.portfolio-ran-text{
+    position: absolute;
+    top: 0;
+  
+    width: 296px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+ 
 .page{
     border-bottom: 1px solid #e7e9fc;
 border-left: 1px solid #e7e9fc;
@@ -320,3 +408,55 @@ color:#4d5ae5;
  display: inline-block;
         margin-bottom: 16px;
 }
+.container-logo{
+    display: flex;
+align-items: baseline;
+}
+.footer-logo{
+    margin-right: 120px;
+}
+  .footer-list {
+    display: flex;
+    column-gap: 120px;
+  }
+.footer-link {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .footer-link-icon:hover,
+  .footer-link-icon:focus {
+    background-color: #31d0aa;
+  }
+  
+  .footer-link-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .footer-social-list {
+ display: flex;
+justify-content: center;
+    gap: 16px;
+  }
+  .footer-social-text {
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+  }
+  .footer-icon {
+    fill: #f4f4fd;
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+  }
