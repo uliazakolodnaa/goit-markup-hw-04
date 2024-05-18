@@ -185,6 +185,17 @@ background-color: #404BBF;
 }
 
 /* SECTION 1 */
+.icon-svg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+  background: #f4f4fd;
+  height: 112px;
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
